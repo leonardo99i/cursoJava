@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class desafioJogoAdvinhacao {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
-        int numeroGerado = new Random().nextInt(100);//Isso ira gerar um numero aleatori entre 0 e 100
+        int numeroGerado = new Random().nextInt(100);//Isso ira gerar um numero aleatorio entre 0 e 100
         int tentativas = 0;
 
-        while(tentativas < 5){
+        while(tentativas < 8){
             System.out.println("Digite um numero entre 0 a 100: ");
             int numeroDigitado = leitura.nextInt();
             tentativas++;
@@ -16,9 +16,9 @@ public class desafioJogoAdvinhacao {
                 System.out.println("Parabens você acertou!!!");
                 break;
             }else if(numeroDigitado < numeroGerado){
-                System.out.println("Numero digitado é menor que o esperado!");   
+                System.out.println("Precisa ser maior");   
             }else{
-                System.out.println("Numero digitado é maior que o esperado");
+                System.out.println("Precisa ser menor");
             }
         }
 
